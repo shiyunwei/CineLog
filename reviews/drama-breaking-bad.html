@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【劇評】絕命毒師 (Breaking Bad) - 觀影筆記</title>
+  <!-- 電影拍板 Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導航列 (返回首頁) -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 text-neutral-300 hover:text-white transition group text-sm font-medium">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span>
+        <span>返回首頁目錄</span>
+      </a>
+      <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Film & TV Notes</span>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full">
+    <article class="space-y-8">
+
+      <!-- 16:9 劇照展示 -->
+      <div class="rounded-2xl overflow-hidden border border-[#262630] relative aspect-video shadow-2xl shadow-emerald-950/20 group">
+        <img src="../assets/drama-breaking-bad.jpg" alt="絕命毒師劇照" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-80"></div>
+      </div>
+
+      <!-- 作品標頭元資料 -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- 類型標籤 (Pills) -->
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-800">影集</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">犯罪</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">劇情</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">驚悚</span>
+          <span class="text-xs text-neutral-500 ml-auto font-mono">完結紀念 · 全5季共62集</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">絕命毒師</h1>
+        <p class="text-lg text-neutral-400 font-light">Breaking Bad (2008–2013) · 主創：文斯·吉利根 · 主演：布萊恩·克萊斯頓、亞倫·保羅</p>
+
+        <!-- 5 星評分專用徽章與閱讀時長 -->
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="inline-flex items-center gap-3 bg-[#18181f] border border-[#262630] px-4 py-2 rounded-xl">
+            <span class="text-2xl text-[#f5c518]">★★★★★</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">4.8 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              <span class="text-xs text-neutral-400">美劇黃金年代無可爭議的至高神作</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-500 font-mono bg-[#18181f] border border-[#262630] px-3 py-2 rounded-xl">⏱️ 閱讀時間：約 4 分鐘</span>
+        </div>
+      </header>
+
+      <!-- 作品檔案規格面板 (Film Facts Grid) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#18181f] border border-[#262630] rounded-2xl p-4 sm:p-5">
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">放送週期</span>
+          <span class="text-sm font-semibold text-white">2008–2013</span>
+          <span class="text-xs text-neutral-400 block">全 5 季 · 62 集</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">主創編劇</span>
+          <span class="text-sm font-semibold text-white">文斯·吉利根</span>
+          <span class="text-xs text-neutral-400 block">Vince Gilligan</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">領銜主演</span>
+          <span class="text-sm font-semibold text-white">布萊恩·克萊斯頓</span>
+          <span class="text-xs text-neutral-400 block">亞倫·保羅、安娜·岡恩</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">推薦觀影規格</span>
+          <span class="text-sm font-semibold text-emerald-400">夜間閉門連看</span>
+          <span class="text-xs text-neutral-400 block">戴耳機沉浸壓迫感</span>
+        </div>
+      </section>
+
+      <!-- 一句話短評 / 金句摘錄 (含一鍵複製) -->
+      <div class="p-5 border-l-4 border-emerald-500 bg-[#18181f] rounded-r-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <blockquote id="quote-text" class="italic text-neutral-200 text-base leading-relaxed">
+          「你問我是誰？我不是身陷危險之中，史凱勒，我就是危險本身。當有人開門被開槍擊斃，你以為那個人是我？不，我就是那個敲門的人！」
+        </blockquote>
+        <button onclick="copyQuote()" id="copy-btn" class="self-end sm:self-center flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 hover:text-white transition cursor-pointer border border-neutral-700 font-mono">
+          <span>📋 複製金句</span>
+        </button>
+      </div>
+
+      <!-- 多維度深度評析 (Dimension Rating Bars) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-[#262630] pb-3">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-[#f5c518]">★</span> 多維度深度評析
+          </h2>
+          <span class="text-xs font-mono text-neutral-400">綜合評析指數：9.8 / 10</span>
+        </div>
+        <div class="space-y-3.5 text-sm">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">劇本結構與伏筆鋪陳 (Narrative & Pacing)</span>
+              <span class="text-emerald-400 font-mono font-bold">9.9 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full" style="width: 99%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">角色演技與情緒張力 (Acting Performance)</span>
+              <span class="text-emerald-400 font-mono font-bold">10.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">視覺色彩學與鏡頭符號 (Cinematography)</span>
+              <span class="text-emerald-400 font-mono font-bold">9.6 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full" style="width: 96%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">配樂節奏與音效氛圍 (Score & Sound Design)</span>
+              <span class="text-emerald-400 font-mono font-bold">9.5 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-emerald-500 rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 觀影決策指南 (Audience Guide) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-[#18181f] border border-emerald-900/40 rounded-2xl p-5 sm:p-6 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <span>✅</span>
+            <h3>極力推薦觀看群體</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>熱愛縝密嚴謹犯罪劇與人性心理轉折的觀眾</li>
+            <li>追求「零爛尾」、各季口碑持續走高的神劇愛好者</li>
+            <li>欣賞細節伏筆與頂級角色演技的深度影迷</li>
+          </ul>
+        </div>
+        <div class="bg-[#18181f] border border-rose-900/30 rounded-2xl p-5 sm:p-6 space-y-2">
+          <div class="flex items-center gap-2 text-rose-400 font-bold text-sm">
+            <span>⚠️</span>
+            <h3>可能需要心理準備</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>前兩季節奏鋪陳較為沉緩，習慣速食無腦打鬥者需有耐心</li>
+            <li>劇中道德界線崩塌極致，抗拒陰暗、壓抑氛圍者請斟酌</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 無雷簡介 (Spoiler-Free) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-[#262630] pb-3">
+          <span class="text-emerald-400">●</span>
+          <h2>無雷簡介與推薦指南</h2>
+        </div>
+        <div class="space-y-4 text-neutral-300 leading-relaxed">
+          <p>
+            生活在美國新墨西哥州阿爾伯克基的平凡高中化學老師華特·懷特（布萊恩·克萊斯頓 飾），一生謹小慎微、懷才不遇。在五十歲生日隔天，他意外被診斷出罹患肺癌末期，只剩兩年壽命。面對沉重的醫療債務、懷孕的妻子與患有腦性麻痺的兒子，絕望的華特做出了驚天動地的抉擇——聯手昔日逃課的問題學生傑西·平克曼（亞倫·保羅 飾），以一台老舊露營車為基地，利用頂尖的化學純度提煉出黑市前所未見的 99.1% 純度「藍色冰毒」。
+          </p>
+          <p>
+            全劇被譽為「電視史上最偉大的性格質變實驗」——將一位懦弱平庸的「奇普斯先生（Mr. Chips）」一步步淬鍊蛻變為令人聞風喪膽的傳奇大毒梟「疤面煞星（Scarface）」。文斯·吉利根以登峰造極的劇本結構、象徵色彩學與壓迫感極致的運鏡，創造了一部近乎完美的美劇教科書。
+          </p>
+        </div>
+      </section>
+
+      <!-- 有雷心得分析 (Spoiler Section - 原生手風琴折疊) -->
+      <section class="space-y-4">
+        <details class="group bg-[#18181f] border border-amber-900/40 rounded-2xl overflow-hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-neutral-800/40 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">⚠️</span>
+              <div>
+                <h2 class="text-lg font-bold text-amber-200">深度劇情剖析與結局討論（含重大劇透）</h2>
+                <p class="text-xs text-neutral-400">本區塊包含海森堡的心理轉化、漢克之死與《血・毒・淚》世紀大結局深度解析</p>
+              </div>
+            </div>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform duration-200 font-mono text-xl">▼</span>
+          </summary>
+          <div class="px-6 pb-8 sm:px-8 pt-2 space-y-4 text-neutral-300 border-t border-[#262630]/60 leading-relaxed">
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-emerald-400">#1</span> 海森堡的魔咒：「我做這一切，全是為了我自己」
+              </h3>
+              <p>
+                整整五季裡，華特無數次對家人說：「我做這一切都是為了這個家。」但在最終大結局《血・毒・淚》（Felina）面對史凱勒時，華特終於撕下了偽善的藉口，坦承吐露肺腑之言：「我做這一切是為了我自己。我很享受，而且我真的很擅長。這讓我……真正感到自己活著。」這句坦白是華特一生中最誠實的高光時刻，承認了深埋於內心對權力、掌控與世人敬畏的純粹渴望。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-emerald-400">#2</span> 傑西·平克曼的救贖：狂暴雨夜裡的自由狂嘯
+              </h3>
+              <p>
+                傑西是整部罪惡史詩中唯一的道德錨點。他經歷了簡的窒息死亡、蓋兒的槍殺夢魘、安德莉亞在眼前的慘死，以及被囚禁為製毒奴隸的非人折磨。在最後一刻，當華特將槍推到傑西面前要他殺死自己時，傑西堅定地拒絕成為華特的執行工具：「你想要的話，自己動手。」開著雪佛蘭衝破鐵柵欄在夜色中放聲嘶吼的傑西，終於奪回了靈魂的自由。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-emerald-400">#3</span> 《奧茲曼迪亞斯》與《血・毒・淚》：古典悲劇的巔峰收官
+              </h3>
+              <p>
+                第 14 集《奧茲曼迪亞斯》（Ozymandias）以 IMDb 滿分 10.0 的神蹟見證了帝國的瞬間瓦解——雪萊的名詩「看看我的豐功偉業吧，強者啊，並陷入絕望！」成為海森堡黃金帝國灰飛煙滅的最諷刺註腳。而在終章，伴隨著 Badfinger 的經典名曲《Baby Blue》，中彈的華特微笑撫摸著化學儀器安詳倒在血泊中，死在他唯一深愛且精通的世界裡，為這段現代浮士德的罪惡狂想劃下了完美無缺的休止符。
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 篇章導覽 (Prev / Next Review Navigation) -->
+      <div class="pt-8 border-t border-[#262630] grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="movie-hope.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col">
+          <span class="text-xs text-neutral-500 font-mono">上一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-rose-400 transition mt-1">← 素媛 (4.3★)</span>
+        </a>
+        <a href="movie-toy-story-4.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col text-right">
+          <span class="text-xs text-neutral-500 font-mono">下一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-purple-400 transition mt-1">玩具總動員4 (4.2★) →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 頁腳版權 -->
+  <footer class="border-t border-[#262630] py-6 text-center text-xs text-neutral-500">
+    <p>© 2026 個人影評與劇評筆記 · 使用純靜態 HTML & Tailwind CSS 建構</p>
+  </footer>
+
+  <script>
+    function copyQuote() {
+      const text = document.getElementById('quote-text').innerText.replace(/[「」]/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✅ 已複製！</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

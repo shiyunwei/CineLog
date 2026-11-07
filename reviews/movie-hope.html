@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【影評】素媛 (Hope / 소원) - CineLog 觀影筆記</title>
+  <!-- 電影拍板 Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導航列 (返回首頁) -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 text-neutral-300 hover:text-white transition group text-sm font-medium">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span>
+        <span>返回首頁目錄</span>
+      </a>
+      <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">CineLog · Review</span>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full">
+    <article class="space-y-8">
+
+      <!-- 16:9 劇照展示 -->
+      <div class="rounded-2xl overflow-hidden border border-[#262630] relative aspect-video shadow-2xl shadow-rose-950/20 group">
+        <img src="../assets/movie-hope.jpg" alt="素媛劇照" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-80"></div>
+      </div>
+
+      <!-- 作品標頭元資料 -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- 類型標籤 (Pills) -->
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-rose-950/80 text-rose-300 border border-rose-800">劇情</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">犯罪</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">家庭</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">真實改編</span>
+          <span class="text-xs text-neutral-500 ml-auto font-mono">筆記時間：2026-11-08</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-white">素媛</h1>
+        <p class="text-lg text-neutral-400 font-light">
+          Hope / 소원 (2013) · 導演：李濬益 · 主演：薛景求、嚴志媛、李甄
+        </p>
+
+        <!-- 5 星評分專用徽章與閱讀時長 -->
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="inline-flex items-center gap-3 bg-[#18181f] border border-[#262630] px-4 py-2.5 rounded-xl">
+            <span class="text-2xl text-[#f5c518]">★★★★☆</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">4.3 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              <span class="text-xs text-neutral-400">洗滌心靈的創傷修復與人倫至愛神作</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-500 font-mono bg-[#18181f] border border-[#262630] px-3 py-2 rounded-xl">⏱️ 閱讀時間：約 4 分鐘</span>
+        </div>
+      </header>
+
+      <!-- 作品檔案規格面板 (Film Facts Grid) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#18181f] border border-[#262630] rounded-2xl p-4 sm:p-5">
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">上映規格 / 片長</span>
+          <span class="text-sm font-semibold text-white">2013 年</span>
+          <span class="text-xs text-neutral-400 block">122 分鐘 (青龍獎最佳影片)</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">導演執導</span>
+          <span class="text-sm font-semibold text-white">李濬益</span>
+          <span class="text-xs text-neutral-400 block">Lee Joon-ik</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">領銜主演</span>
+          <span class="text-sm font-semibold text-white">薛景求、李甄</span>
+          <span class="text-xs text-neutral-400 block">嚴志媛、金海淑</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">推薦觀影情境</span>
+          <span class="text-sm font-semibold text-rose-400">備妥面紙靜心獨處</span>
+          <span class="text-xs text-neutral-400 block">心靈洗滌與親情沈思</span>
+        </div>
+      </section>
+
+      <!-- 一句話短評 / 金句摘錄 (含一鍵複製) -->
+      <div class="p-5 border-l-4 border-rose-500 bg-[#18181f] rounded-r-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <blockquote id="quote-text" class="italic text-neutral-200 text-base leading-relaxed">
+          「最孤獨的人最親切，最難過的人笑得最燦爛，因為他們不想看見其他人受同樣的苦。」
+        </blockquote>
+        <button onclick="copyQuote()" id="copy-btn" class="self-end sm:self-center flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 hover:text-white transition cursor-pointer border border-neutral-700 font-mono">
+          <span>📋 複製金句</span>
+        </button>
+      </div>
+
+      <!-- 多維度深度評析 (Dimension Rating Bars) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-[#262630] pb-3">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-[#f5c518]">★</span> 多維度深度評析
+          </h2>
+          <span class="text-xs font-mono text-neutral-400">綜合評析指數：9.3 / 10</span>
+        </div>
+        <div class="space-y-3.5 text-sm">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">情感共鳴與淚點刻畫 (Emotional Resonance)</span>
+              <span class="text-rose-400 font-mono font-bold">9.9 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-rose-500 rounded-full" style="width: 99%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">薛景求與李甄演技 (Acting & Child Prodigy)</span>
+              <span class="text-rose-400 font-mono font-bold">9.8 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-rose-500 rounded-full" style="width: 98%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">創傷修復與人性微光 (Healing & Societal Empathy)</span>
+              <span class="text-rose-400 font-mono font-bold">9.3 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-rose-500 rounded-full" style="width: 93%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">導演克制視角與人道溫度 (Directorial Restraint)</span>
+              <span class="text-rose-400 font-mono font-bold">9.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-rose-500 rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 觀眾選片決策指引 (Audience Decision Guide) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-emerald-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <span>✓</span>
+            <h3>這部作品極度適合你，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>渴望感受世間最純粹笨拙的深沉父愛與家庭牽絆</li>
+            <li>關注性侵創傷修復、兒童心理復健與社會人情微光者</li>
+            <li>能直面真實沉重悲劇、期望從極致痛苦中汲取重生勇氣的觀眾</li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-amber-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <span>✕</span>
+            <h3>觀看前請做好心理準備，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>改編自真實重大慘案（趙斗淳事件），前半段創傷情節極其沉重揪心</li>
+            <li>淚點極低或近期情緒較為低落者，強烈建議避免單獨深夜觀看</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 無雷簡介 (Spoiler-Free) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-[#262630] pb-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          <h2>無雷簡介與觀影指引</h2>
+        </div>
+        <div class="space-y-4 text-neutral-300 leading-relaxed text-sm sm:text-base">
+          <p>
+            在一個飄著微雨的清晨，小學女生素媛（李甄 飾）如常撐著傘走在上學的路上，卻不幸遭遇了極其殘暴的侵害，身心遭受了難以逆轉的毀滅性摧殘。當父親東勳（薛景求 飾）與母親美熙（嚴志媛 飾）在醫院看見奄奄一息的女兒時，整個原本溫馨平靜的家庭瞬間墜入深不見底的絕望深淵。
+          </p>
+          <p>
+            面對漫長的醫療復健、社會輿論的窺探與法律制度的無力，導演李濬益並未耽溺於剝削受害者的血腥與仇恨，而是將筆觸聚焦於「創傷之後的漫長療癒」。鄰里的默默守護、心理醫生的耐心引導，以及父親為了讓心生恐懼的女兒重新展露笑顏，笨拙穿上巨大布偶裝的默默陪伴，共同交織出一曲在人間至暗時刻綻放的生命希望之歌。
+          </p>
+        </div>
+      </section>
+
+      <!-- 有雷心得分析 (Spoiler Section - 原生手風琴折疊) -->
+      <section class="space-y-4">
+        <details class="group bg-[#18181f] border border-amber-900/40 rounded-2xl overflow-hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-neutral-800/40 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">⚠️</span>
+              <div>
+                <h2 class="text-lg font-bold text-amber-200">深度劇情剖析與結局探討（含重大劇透）</h2>
+                <p class="text-xs text-neutral-400 mt-0.5">點擊以展開完整解析：含人偶服背後的沉默父愛、法庭對質與新生希望</p>
+              </div>
+            </div>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform duration-200 font-mono text-xl">▼</span>
+          </summary>
+          <div class="px-6 pb-8 sm:px-8 pt-4 space-y-5 text-neutral-300 border-t border-[#262630]/60 leading-relaxed text-sm sm:text-base">
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-rose-400">#1</span> 可可蒙布偶服：天下最笨拙也最偉大的父愛
+              </h3>
+              <p>
+                創傷後的素媛對所有成年男性產生了嚴重的排斥與恐懼，甚至連親生父親靠近都會引發劇烈的生理顫抖。為了不給女兒壓力，薛景求飾演的父親選擇穿上女兒最喜歡的「可可蒙」（Cocomong）卡通人偶裝。在酷熱難耐的天氣裡，汗流浹背的父親笨拙地搖晃身體、默默走在放學的女兒身後。當素媛主動為滿頭大汗的布偶拉開拉鍊、伸手擦去父親臉上的汗水時，無聲的淚水崩潰化作了全片最催淚的人性高光。
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-rose-400">#2</span> 司法體系的冰冷缺憾與鄰里社群的溫暖修復
+              </h3>
+              <p>
+                電影無比真實地批判了司法體系在面對醉酒藉口時的荒謬判決（僅判刑 12 年），也展現了法庭取證時對受害幼童的二次傷害。但不同於純粹發洩復仇怒火的犯罪片，《素媛》將鏡頭轉向了工廠同事籌款、街坊鄰居悄悄貼在文具店上的加油便利貼、以及小玩伴榮植默默守護素媛的童真。正是這些微弱卻真實的人性微光，承托住了即將瓦解的一家人。
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-rose-400">#3</span> 弟弟的降生與紙飛機：傷口長出的堅韌生命力
+              </h3>
+              <p>
+                在結尾，新生的弟弟降臨人間，素媛站在嬰兒床前輕輕對弟弟說：「你能出生在這個世界上，真是太好了。」這句話呼應了她曾在筆記本上寫下的沉痛疑問——「為什麼我會出生在世界上？」經歷了人間最殘酷的暴行，素媛終於在愛與守護中找到了與世界和解的微光，折成紙飛機的過往向著藍天飛去，為這部令人心碎的作品注入了永恆的生命力量。
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 篇章導覽 (Prev / Next Review Navigation) -->
+      <div class="pt-8 border-t border-[#262630] grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="../index.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col">
+          <span class="text-xs text-neutral-500 font-mono">目錄導航</span>
+          <span class="text-sm font-bold text-white group-hover:text-rose-400 transition mt-1">← 返回首頁所有筆記</span>
+        </a>
+        <a href="drama-breaking-bad.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col text-right">
+          <span class="text-xs text-neutral-500 font-mono">下一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-emerald-400 transition mt-1">絕命毒師 (4.8★) →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 頁腳 Footer -->
+  <footer class="border-t border-[#262630] bg-[#121216] py-6 text-center text-xs text-neutral-500">
+    <p>© 2026 CineLog 個人影評與劇評筆記 · 使用純靜態 HTML & Tailwind CSS 建構</p>
+  </footer>
+
+  <script>
+    function copyQuote() {
+      const text = document.getElementById('quote-text').innerText.replace(/[「」]/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✅ 已複製！</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

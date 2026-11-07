@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【影評】楚門的世界 (The Truman Show) - CineLog 觀影筆記</title>
+  <!-- 電影拍板 Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導航列 (返回首頁) -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 text-neutral-300 hover:text-white transition group text-sm font-medium">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span>
+        <span>返回首頁目錄</span>
+      </a>
+      <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">CineLog · Review</span>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full">
+    <article class="space-y-8">
+
+      <!-- 16:9 劇照展示 -->
+      <div class="rounded-2xl overflow-hidden border border-[#262630] relative aspect-video shadow-2xl shadow-sky-950/20 group">
+        <img src="../assets/movie-the-truman-show.jpg" alt="楚門的世界劇照" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-80"></div>
+      </div>
+
+      <!-- 作品標頭元資料 -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- 類型標籤 (Pills) -->
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-sky-950/80 text-sky-300 border border-sky-800">喜劇</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">科幻</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">經典哲思</span>
+          <span class="text-xs text-neutral-500 ml-auto font-mono">影史經典 · 1998</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-white">楚門的世界</h1>
+        <p class="text-lg text-neutral-400 font-light">The Truman Show (1998) · 導演：彼得·威爾 · 主演：金·凱瑞、蘿拉·琳妮、艾德·哈里斯</p>
+
+        <!-- 5 星評分專用徽章與閱讀時長 -->
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="inline-flex items-center gap-3 bg-[#18181f] border border-[#262630] px-4 py-2 rounded-xl">
+            <span class="text-2xl text-[#f5c518]">★★★★☆</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">4.6 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              <span class="text-xs text-neutral-400">卓越必看的影史諷刺寓言神作</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-500 font-mono bg-[#18181f] border border-[#262630] px-3 py-2 rounded-xl">⏱️ 閱讀時間：約 3.5 分鐘</span>
+        </div>
+      </header>
+
+      <!-- 作品檔案規格面板 (Film Facts Grid) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#18181f] border border-[#262630] rounded-2xl p-4 sm:p-5">
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">上映年份 / 片長</span>
+          <span class="text-sm font-semibold text-white">1998 年</span>
+          <span class="text-xs text-neutral-400 block">103 分鐘</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">導演 / 編劇</span>
+          <span class="text-sm font-semibold text-white">彼得·威爾</span>
+          <span class="text-xs text-neutral-400 block">編劇：安德魯·尼可</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">領銜主演</span>
+          <span class="text-sm font-semibold text-white">金·凱瑞</span>
+          <span class="text-xs text-neutral-400 block">蘿拉·琳妮、艾德·哈里斯</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">推薦觀影情境</span>
+          <span class="text-sm font-semibold text-sky-400">寧靜午後獨享重溫</span>
+          <span class="text-xs text-neutral-400 block">細品微表情與哲學暗示</span>
+        </div>
+      </section>
+
+      <!-- 一句話短評 / 金句摘錄 (含一鍵複製) -->
+      <div class="p-5 border-l-4 border-sky-500 bg-[#18181f] rounded-r-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <blockquote id="quote-text" class="italic text-neutral-200 text-base leading-relaxed">
+          「假如再也碰不見你，祝你早安、午安，還有晚安！」
+        </blockquote>
+        <button onclick="copyQuote()" id="copy-btn" class="self-end sm:self-center flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 hover:text-white transition cursor-pointer border border-neutral-700 font-mono">
+          <span>📋 複製金句</span>
+        </button>
+      </div>
+
+      <!-- 多維度深度評析 (Dimension Rating Bars) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-[#262630] pb-3">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-[#f5c518]">★</span> 多維度深度評析
+          </h2>
+          <span class="text-xs font-mono text-neutral-400">綜合評析指數：9.4 / 10</span>
+        </div>
+        <div class="space-y-3.5 text-sm">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">劇本創意與哲學寓意 (Concept & Allegory)</span>
+              <span class="text-sky-400 font-mono font-bold">9.9 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-sky-500 rounded-full" style="width: 99%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">金·凱瑞演技突破 (Carrey's Dramatic Acting)</span>
+              <span class="text-sky-400 font-mono font-bold">9.8 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-sky-500 rounded-full" style="width: 98%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">荒謬喜劇與現實諷刺 (Satire & Societal Commentary)</span>
+              <span class="text-sky-400 font-mono font-bold">9.3 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-sky-500 rounded-full" style="width: 93%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">窺視視角與鏡頭語言 (Surveillance Framing)</span>
+              <span class="text-sky-400 font-mono font-bold">9.1 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-sky-500 rounded-full" style="width: 91%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 觀眾選片決策指引 (Audience Decision Guide) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-emerald-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <span>✓</span>
+            <h3>這部作品極度適合你，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>喜愛探討「真實 vs 虛假」、「自由意志 vs 命運安排」的哲思作品</li>
+            <li>想見證金·凱瑞褪去誇張肢體、展現細膩痛楚的人性演技神作</li>
+            <li>對自媒體、網紅實況與現代社會窺私文化有深刻共鳴與反思者</li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-amber-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <span>✕</span>
+            <h3>觀看前請做好心理準備，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>預期看到一整部徹頭徹尾捧腹大笑的爆笑喜劇（後半段情緒相當沉重孤寂）</li>
+            <li>討厭小成本溫馨風格、期待宏大動作場面或好萊塢特效者</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 無雷簡介 (Spoiler-Free) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-[#262630] pb-3">
+          <span class="text-emerald-400">●</span>
+          <h2>無雷簡介與推薦指南</h2>
+        </div>
+        <div class="space-y-4 text-neutral-300 leading-relaxed">
+          <p>
+            楚門·伯班克（金·凱瑞 飾）是一位生活在風景如畫、鄰里和睦的海景小鎮上的普通保險經紀人。他過著規律而平凡的日子，渴望探險卻對大海有著莫名的童年陰影。然而楚門絲毫不知，從他呱呱墜地的那一刻起，他的整個人生就是一場被全球超過數十億觀眾二十四小時不間斷觀看的巨型實境秀。
+          </p>
+          <p>
+            整個小鎮是全球最大的巨蛋型人工攝影棚，身邊深愛的妻子、形影不離的摯友、親切的鄰居，無一例外全是領薪演戲的演員。直到某天，一盞標示著天狼星的聚光燈從天空墜落，收音機意外傳出導播調度他行蹤的頻道，這座精緻謊言構築的烏托邦開始崩解。本片是金·凱瑞跳脫純狂想喜劇、邁入深度劇情片的轉型巔峰之作，笑中帶淚且發人深省。
+          </p>
+        </div>
+      </section>
+
+      <!-- 有雷心得分析 (Spoiler Section - 原生手風琴折疊) -->
+      <section class="space-y-4">
+        <details class="group bg-[#18181f] border border-amber-900/40 rounded-2xl overflow-hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-neutral-800/40 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">⚠️</span>
+              <div>
+                <h2 class="text-lg font-bold text-amber-200">深度劇情剖析與結局討論（含重大劇透）</h2>
+                <p class="text-xs text-neutral-400">本區塊包含造物主的溫柔極權、撕裂藍天的鞠躬與電視機前隨即轉台的冷酷現實解析</p>
+              </div>
+            </div>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform duration-200 font-mono text-xl">▼</span>
+          </summary>
+          <div class="px-6 pb-8 sm:px-8 pt-2 space-y-4 text-neutral-300 border-t border-[#262630]/60 leading-relaxed">
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-sky-400">#1</span> 造物主「克里斯托弗」的狂妄與愛：溫柔鄉是最致命的監獄
+              </h3>
+              <p>
+                實境秀總導演克里斯托弗（艾德·哈里斯 飾）名字取自基督（Christ），他在月球控制中心俯瞰眾生，宛如上帝。他對楚門抱持著扭曲的父愛，堅信外面的世界充斥著謊言與殘酷，而自己為楚門打造的海景鎮才是純淨的世外桃源。這段關係象徵了極權主義最隱蔽的面孔——以「為你好、保護你免受傷害」為名，徹底剝奪人類追求真理與冒險痛苦的自由。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-sky-400">#2</span> 撞破巨幕的鞠躬：荒謬存在主義的最強抗爭
+              </h3>
+              <p>
+                楚門克服對溺水的滅頂恐懼，揚帆「聖瑪利亞號」衝向地平線，最終小船船頭刺穿了畫著藍天白雲的厚重壁畫。當克里斯托弗從天空中如上帝般發聲警告：「外面的世界並不比我創造的更真實」時，楚門留下了一句招牌台詞，深深鞠了一躬，果斷推開黑色的逃生門走入未知。這一鞠躬，是他對長達三十年被操控人生的告別，也是人類向虛妄神祇爭取靈魂尊嚴的永恆定格。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-sky-400">#3</span> 鏡頭轉向的殘酷諷刺：狂歡之後，誰又在乎楚門？
+              </h3>
+              <p>
+                電影結尾最令人不寒而慄的並非楚門在海上的搏鬥，而是屏幕前群眾的反應。守在電視機前的警衛為楚門的逃脫歡呼雀躍，但在雪花畫面亮起後的幾秒鐘內，他們便毫不在意地翻閱節目表說道：「看看還有什麼好看的？」觀眾的廉價感動與冷酷轉台，狠狠刺痛了現代大眾傳播娛樂至死的本質——楚門付出了整個人生，卻只是世人消遣的一道快餐。
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 篇章導覽 (Prev / Next Review Navigation) -->
+      <div class="pt-8 border-t border-[#262630] grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="movie-the-backrooms.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col">
+          <span class="text-xs text-neutral-500 font-mono">上一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-yellow-400 transition mt-1">← 後室 The Backrooms (4.0★)</span>
+        </a>
+        <a href="movie-dune-2.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col text-right">
+          <span class="text-xs text-neutral-500 font-mono">下一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-amber-400 transition mt-1">沙丘：第二部 (4.5★) →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="border-t border-[#262630] py-6 text-center text-xs text-neutral-500">
+    <p>© 2026 個人影評與劇評筆記 · 使用純靜態 HTML & Tailwind CSS 建構</p>
+  </footer>
+
+  <script>
+    function copyQuote() {
+      const text = document.getElementById('quote-text').innerText.replace(/[「」]/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✅ 已複製！</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

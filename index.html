@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineLog | 個人影評與劇評筆記</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導覽列 Header -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-3 h-3 rounded-full bg-[#e50914] animate-pulse"></span>
+        <a href="index.html" class="text-xl font-black tracking-wider text-white">
+          CINE<span class="text-[#e50914]">LOG</span>
+        </a>
+      </div>
+      <div class="flex items-center gap-4 text-sm text-neutral-400">
+        <a href="#reviews-grid" class="hover:text-white transition hidden sm:inline-block">瀏覽所有作品</a>
+        <span class="text-xs px-2.5 py-1 rounded-full bg-[#18181f] border border-[#262630] text-neutral-400 font-mono">
+          6 篇筆記
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主視覺橫幅 Hero Banner -->
+  <section class="border-b border-[#262630] bg-gradient-to-b from-[#121216] via-[#121216] to-[#0a0a0c] py-16 sm:py-20 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#18181f] border border-[#262630] text-xs font-mono text-neutral-400 tracking-widest uppercase">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#e50914] inline-block animate-pulse"></span>
+        <span>Curated Film & TV Journal</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-black tracking-tight text-white">
+        個人影評與劇評筆記
+      </h1>
+      <p class="text-neutral-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        記錄每一部撼動心靈的影視之作。提供精闢客觀的無雷觀影指南，以及深度的結局與象徵解析。
+      </p>
+
+      <!-- 個人觀影數據微儀表板 (Stats Bar) -->
+      <div class="pt-2 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-2xl mx-auto">
+        <div class="bg-[#18181f]/80 border border-[#262630] rounded-xl p-3 text-center">
+          <span class="text-xs text-neutral-500 block font-mono">典藏作品</span>
+          <span class="text-xl font-extrabold text-white">6 <span class="text-xs text-neutral-500 font-normal">部</span></span>
+        </div>
+        <div class="bg-[#18181f]/80 border border-[#262630] rounded-xl p-3 text-center">
+          <span class="text-xs text-neutral-500 block font-mono">綜合均分</span>
+          <span class="text-xl font-extrabold text-[#f5c518]">4.40 <span class="text-xs text-neutral-500 font-normal">★</span></span>
+        </div>
+        <div class="bg-[#18181f]/80 border border-[#262630] rounded-xl p-3 text-center">
+          <span class="text-xs text-neutral-500 block font-mono">電影 / 影集</span>
+          <span class="text-xl font-extrabold text-white">5 <span class="text-xs text-neutral-500 font-normal">/</span> 1</span>
+        </div>
+        <div class="bg-[#18181f]/80 border border-[#262630] rounded-xl p-3 text-center">
+          <span class="text-xs text-neutral-500 block font-mono">涵蓋類型</span>
+          <span class="text-xl font-extrabold text-white">9 <span class="text-xs text-neutral-500 font-normal">種</span></span>
+        </div>
+      </div>
+
+      <!-- 即打即篩搜尋欄 (Search Bar) -->
+      <div class="pt-2 max-w-xl mx-auto relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-neutral-500">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+        </div>
+        <input type="text" id="review-search" placeholder="搜尋片名、導演、主演或類型標籤..." class="w-full bg-[#18181f]/90 border border-[#262630] rounded-xl pl-11 pr-4 py-3 text-sm text-white placeholder-neutral-500 focus:outline-none focus:border-[#e50914] focus:ring-1 focus:ring-[#e50914] transition shadow-inner">
+      </div>
+    </div>
+  </section>
+
+  <!-- 影評卡片列表主要區塊 -->
+  <main class="flex-grow max-w-6xl mx-auto px-4 sm:px-6 py-12 w-full space-y-8">
+    
+    <!-- 分類切換標籤與計數 -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#262630]">
+      <div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0" id="filter-tabs">
+        <button data-filter="all" class="tab-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-[#e50914] text-white transition cursor-pointer">
+          全部 (6)
+        </button>
+        <button data-filter="movie" class="tab-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-[#18181f] text-neutral-400 hover:text-white border border-[#262630] transition cursor-pointer">
+          🎬 電影 (5)
+        </button>
+        <button data-filter="drama" class="tab-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-[#18181f] text-neutral-400 hover:text-white border border-[#262630] transition cursor-pointer">
+          📺 影集 (1)
+        </button>
+        <button data-filter="top" class="tab-btn px-4 py-1.5 rounded-full text-xs font-semibold bg-[#18181f] text-neutral-400 hover:text-white border border-[#262630] transition cursor-pointer">
+          ⭐ 高分精選 (3)
+        </button>
+      </div>
+      <div class="flex items-center gap-2 text-xs text-neutral-400 font-mono">
+        <span id="filtered-count" class="text-neutral-300 font-bold">顯示 6 部作品</span>
+      </div>
+    </div>
+
+    <!-- AI Agent 卡片注入錨點：新卡片請插入在此 container 的最上方 (First Child) -->
+    <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- START: Review Card for 素媛 -->
+      <article data-type="movie" data-rating="4.3" data-keywords="素媛 hope 소원 李濬益 薛景求 嚴志媛 李甄 電影 劇情 犯罪 家庭 真實改編 4.3" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-rose-500/50 hover:shadow-2xl hover:shadow-rose-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/movie-hope.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/movie-hope.jpg" alt="素媛劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-rose-950/80 text-rose-300 border border-rose-800">劇情</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">家庭</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">2026-11-08</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-rose-400 transition">
+                <a href="reviews/movie-hope.html">素媛</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">Hope / 소원 (2013)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★☆</span>
+                <span class="text-xs font-bold text-neutral-200">4.3 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 4 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              改編自韓國重大真實案件。在極致殘暴的至暗深淵裡，笨拙套上卡通布偶裝的父親與不離不棄的鄰里，共同守護女孩縫合破碎靈魂的希望曙光。
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/movie-hope.html" class="inline-flex items-center text-xs font-bold text-rose-400 hover:text-rose-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 素媛 -->
+
+      <!-- START: Review Card for 絕命毒師 -->
+      <article data-type="drama" data-rating="4.8" data-keywords="絕命毒師 breaking bad 文斯吉利根 布萊恩克萊斯頓 亞倫保羅 影集 犯罪 劇情 驚悚 4.8" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 hover:shadow-2xl hover:shadow-emerald-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/drama-breaking-bad.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/drama-breaking-bad.jpg" alt="絕命毒師劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-800">影集</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">犯罪</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">劇情</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">驚悚</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">全5季完結</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">
+                <a href="reviews/drama-breaking-bad.html">絕命毒師</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">Breaking Bad (2008–2013)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★★</span>
+                <span class="text-xs font-bold text-neutral-200">4.8 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 4 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              當懦弱高中化學師被診斷出肺癌，他以純度 99.1% 的藍色結晶步入黑暗深淵。美劇黃金年代無可爭議的至高神作。
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/drama-breaking-bad.html" class="inline-flex items-center text-xs font-bold text-emerald-400 hover:text-emerald-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 絕命毒師 -->
+
+      <!-- START: Review Card for 玩具總動員4 -->
+      <article data-type="movie" data-rating="4.2" data-keywords="玩具總動員4 toy story 4 喬許庫利 湯姆漢克斯 動畫 冒險 喜劇 奇幻 電影 4.2" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-purple-500/50 hover:shadow-2xl hover:shadow-purple-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/movie-toy-story-4.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/movie-toy-story-4.jpg" alt="玩具總動員4劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-purple-950/80 text-purple-300 border border-purple-800">動畫</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">冒險</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">喜劇</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">奇幻</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">2026-11-08</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition">
+                <a href="reviews/movie-toy-story-4.html">玩具總動員4</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">Toy Story 4 (2019)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★☆</span>
+                <span class="text-xs font-bold text-neutral-200">4.2 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 3 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              當陪伴孩子的使命抵達終點，玩具該何去何從？胡迪在嘉年華與舊愛重逢，為橫跨二十餘年的冒險寫下獻給成年人的溫柔告別。
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/movie-toy-story-4.html" class="inline-flex items-center text-xs font-bold text-purple-400 hover:text-purple-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 玩具總動員4 -->
+
+      <!-- START: Review Card for 後室 -->
+      <article data-type="movie" data-rating="4.0" data-keywords="後室 the backrooms 凱恩帕森斯 kane parsons 科幻 恐怖 類比恐怖 電影 4.0" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-yellow-500/50 hover:shadow-2xl hover:shadow-yellow-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/movie-the-backrooms.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/movie-the-backrooms.jpg" alt="後室劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">科幻</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">恐怖</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">2026-11-08</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-yellow-400 transition">
+                <a href="reviews/movie-the-backrooms.html">後室</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">The Backrooms (2022)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★☆</span>
+                <span class="text-xs font-bold text-neutral-200">4.0 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 3 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              當代現象級類比恐怖神作。穿透現實地面掉入無窮無盡的泛黃走廊，受潮地毯與日光燈嗡嗡聲背後，是未知的非自然實體。
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/movie-the-backrooms.html" class="inline-flex items-center text-xs font-bold text-yellow-400 hover:text-yellow-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 後室 -->
+
+      <!-- START: Review Card for 楚門的世界 -->
+      <article data-type="movie" data-rating="4.6" data-keywords="楚門的世界 the truman show 彼得威爾 金凱瑞 喜劇 科幻 經典 電影 4.6" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-sky-500/50 hover:shadow-2xl hover:shadow-sky-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/movie-the-truman-show.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/movie-the-truman-show.jpg" alt="楚門的世界劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">喜劇</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">科幻</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">經典</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">2026-11-08</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-sky-400 transition">
+                <a href="reviews/movie-the-truman-show.html">楚門的世界</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">The Truman Show (1998)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★☆</span>
+                <span class="text-xs font-bold text-neutral-200">4.6 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 3 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              荒誕喜劇包裝下的存在主義寓言。如果整個世界只是一場全天候直播的實境秀，你是否有勇氣撞破天空布景，邁向殘酷卻真實的未知？
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/movie-the-truman-show.html" class="inline-flex items-center text-xs font-bold text-sky-400 hover:text-sky-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 楚門的世界 -->
+
+      <!-- START: Review Card for 沙丘：第二部 -->
+      <article data-type="movie" data-rating="4.5" data-keywords="沙丘 第二部 dune part two 丹尼維勒納夫 提摩西夏勒梅 辛蒂亞 科幻 史詩 冒險 電影 4.5" class="bg-[#18181f] border border-[#262630] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-amber-500/50 hover:shadow-2xl hover:shadow-amber-950/30 transition duration-300 group">
+        <!-- 16:9 劇照封面 -->
+        <a href="reviews/movie-dune-2.html" class="block aspect-video overflow-hidden relative">
+          <img src="assets/movie-dune-2.jpg" alt="沙丘：第二部劇照" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#18181f] via-transparent to-transparent"></div>
+        </a>
+
+        <div class="p-6 pt-3 space-y-3 flex-grow flex flex-col justify-between">
+          <div class="space-y-3">
+            <!-- 標籤與發布日期 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">科幻</span>
+                <span class="px-2 py-0.5 text-xs rounded-full bg-neutral-800 text-neutral-400">史詩</span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">2026-03-15</span>
+            </div>
+
+            <!-- 標題與原名 -->
+            <div>
+              <h3 class="text-xl font-bold text-white group-hover:text-amber-400 transition">
+                <a href="reviews/movie-dune-2.html">沙丘：第二部</a>
+              </h3>
+              <p class="text-xs text-neutral-400 mt-0.5">Dune: Part Two (2024)</p>
+            </div>
+
+            <!-- 評分與閱讀時長 -->
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-sm text-[#f5c518]">★★★★☆</span>
+                <span class="text-xs font-bold text-neutral-200">4.5 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              </div>
+              <span class="text-xs text-neutral-500 font-mono">⏱️ 4 分鐘閱讀</span>
+            </div>
+
+            <!-- 無雷一句話摘要 -->
+            <p class="text-sm text-neutral-400 line-clamp-3 leading-relaxed">
+              大師丹尼·維勒納夫奠定當代科幻神作地位之作！視聽震撼達到極致，在黃沙滾滾的厄拉科斯星上，將信仰狂熱與權力悲劇詮釋得淋漓盡致。
+            </p>
+          </div>
+
+          <!-- 前往閱讀按鈕 -->
+          <div class="pt-5 mt-4 border-t border-[#262630] flex items-center justify-between">
+            <span class="text-xs text-neutral-500">含防雷深入解析</span>
+            <a href="reviews/movie-dune-2.html" class="inline-flex items-center text-xs font-bold text-amber-400 hover:text-amber-300 transition gap-1">
+              閱讀全文 →
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- END: Review Card for 沙丘：第二部 -->
+
+    </div>
+
+    <!-- 無搜尋結果提示 (Empty State) -->
+    <div id="no-results" class="hidden py-16 text-center space-y-3">
+      <span class="text-4xl block">🔍</span>
+      <p class="text-base text-neutral-300 font-medium">查無符合條件的影評筆記</p>
+      <p class="text-xs text-neutral-500">嘗試更換關鍵字或點擊上方「全部」按鈕重設篩選條件</p>
+    </div>
+
+  </main>
+
+  <!-- 頁腳 Footer -->
+  <footer class="border-t border-[#262630] bg-[#121216] py-8 text-center text-xs text-neutral-500 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p>© 2026 CineLog 個人影評與劇評筆記 · 保留所有權利</p>
+      <p class="text-neutral-600">純靜態架構 · 原生深色影院模式 · 精緻觀影記錄</p>
+    </div>
+  </footer>
+
+  <!-- 即時搜尋與分類切換原生 JavaScript -->
+  <script>
+    const searchInput = document.getElementById('review-search');
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const articles = document.querySelectorAll('#reviews-grid > article');
+    const noResults = document.getElementById('no-results');
+    const filteredCount = document.getElementById('filtered-count');
+    let activeFilter = 'all';
+
+    function filterReviews() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      articles.forEach(article => {
+        const type = article.dataset.type;
+        const rating = parseFloat(article.dataset.rating || 0);
+        const keywords = (article.dataset.keywords || '').toLowerCase();
+
+        let matchesFilter = true;
+        if (activeFilter === 'movie') matchesFilter = (type === 'movie');
+        else if (activeFilter === 'drama') matchesFilter = (type === 'drama');
+        else if (activeFilter === 'top') matchesFilter = (rating >= 4.5);
+
+        const matchesSearch = !query || keywords.includes(query);
+
+        if (matchesFilter && matchesSearch) {
+          article.style.display = '';
+          visibleCount++;
+        } else {
+          article.style.display = 'none';
+        }
+      });
+
+      noResults.classList.toggle('hidden', visibleCount > 0);
+      filteredCount.textContent = `顯示 ${visibleCount} 部作品`;
+    }
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => {
+          b.classList.remove('bg-[#e50914]', 'text-white');
+          b.classList.add('bg-[#18181f]', 'text-neutral-400', 'border', 'border-[#262630]');
+        });
+        btn.classList.add('bg-[#e50914]', 'text-white');
+        btn.classList.remove('bg-[#18181f]', 'text-neutral-400', 'border', 'border-[#262630]');
+        activeFilter = btn.dataset.filter;
+        filterReviews();
+      });
+    });
+
+    searchInput.addEventListener('input', filterReviews);
+  </script>
+
+</body>
+</html>

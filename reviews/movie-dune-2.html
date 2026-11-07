@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【影評】沙丘：第二部 (Dune: Part Two) - CineLog 觀影筆記</title>
+  <!-- 電影拍板 Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導航列 (返回首頁) -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 text-neutral-300 hover:text-white transition group text-sm font-medium">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span>
+        <span>返回首頁目錄</span>
+      </a>
+      <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">CineLog · Review</span>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full">
+    <article class="space-y-8">
+
+      <!-- 16:9 劇照展示 -->
+      <div class="rounded-2xl overflow-hidden border border-[#262630] relative aspect-video shadow-2xl shadow-amber-950/20 group">
+        <img src="../assets/movie-dune-2.jpg" alt="沙丘：第二部劇照" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-80"></div>
+      </div>
+
+      <!-- 作品標頭元資料 -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- 類型標籤 (Pills) -->
+          <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-amber-950/80 text-amber-300 border border-amber-800">史詩</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">科幻</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">冒險</span>
+          <span class="text-xs text-neutral-500 ml-auto font-mono">筆記時間：2026-03-15</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-black tracking-tight text-white">沙丘：第二部</h1>
+        <p class="text-lg text-neutral-400 font-light">
+          Dune: Part Two (2024) · 導演：丹尼·維勒納夫 · 主演：提摩西·夏勒梅、辛蒂亞、蕾貝卡·弗格森、奧斯汀·巴特勒
+        </p>
+
+        <!-- 5 星評分專用徽章與閱讀時長 -->
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="inline-flex items-center gap-3 bg-[#18181f] border border-[#262630] px-4 py-2.5 rounded-xl">
+            <span class="text-2xl text-[#f5c518]">★★★★☆</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">4.5 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              <span class="text-xs text-neutral-400">當代史詩科幻的最高巔峰</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-500 font-mono bg-[#18181f] border border-[#262630] px-3 py-2 rounded-xl">⏱️ 閱讀時間：約 4 分鐘</span>
+        </div>
+      </header>
+
+      <!-- 作品檔案規格面板 (Film Facts Grid) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#18181f] border border-[#262630] rounded-2xl p-4 sm:p-5">
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">上映規格 / 片長</span>
+          <span class="text-sm font-semibold text-white">2024 年</span>
+          <span class="text-xs text-neutral-400 block">166 分鐘 (全片 IMAX 畫幅)</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">導演執導</span>
+          <span class="text-sm font-semibold text-white">丹尼·維勒納夫</span>
+          <span class="text-xs text-neutral-400 block">Denis Villeneuve</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">領銜主演</span>
+          <span class="text-sm font-semibold text-white">提摩西·夏勒梅</span>
+          <span class="text-xs text-neutral-400 block">辛蒂亞、蕾貝卡·弗格森</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">推薦觀影規格</span>
+          <span class="text-sm font-semibold text-amber-400">IMAX 巨幕首選</span>
+          <span class="text-xs text-neutral-400 block">杜比全景聲重低音轟炸</span>
+        </div>
+      </section>
+
+      <!-- 一句話短評 / 金句摘錄 (含一鍵複製) -->
+      <div class="p-5 border-l-4 border-amber-500 bg-[#18181f] rounded-r-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <blockquote id="quote-text" class="italic text-neutral-200 text-base leading-relaxed">
+          「這不是一曲救世主的英雄凱歌，而是一場被狂熱信仰與命運洪流所裹挾吞噬的宇宙級權力悲劇。」
+        </blockquote>
+        <button onclick="copyQuote()" id="copy-btn" class="self-end sm:self-center flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 hover:text-white transition cursor-pointer border border-neutral-700 font-mono">
+          <span>📋 複製金句</span>
+        </button>
+      </div>
+
+      <!-- 多維度深度評析 (Dimension Rating Bars) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-[#262630] pb-3">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-[#f5c518]">★</span> 多維度深度評析
+          </h2>
+          <span class="text-xs font-mono text-neutral-400">綜合評析指數：9.6 / 10</span>
+        </div>
+        <div class="space-y-3.5 text-sm">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">視聽美學與沙蟲奇觀 (Visual Immersion & Framing)</span>
+              <span class="text-amber-400 font-mono font-bold">10.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-amber-500 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">漢斯·季默音效與配樂 (Hans Zimmer Soundscape)</span>
+              <span class="text-amber-400 font-mono font-bold">10.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-amber-500 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">史詩格局與宗教批判 (World-Building & Religion)</span>
+              <span class="text-amber-400 font-mono font-bold">9.6 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-amber-500 rounded-full" style="width: 96%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">劇本改編與情感張力 (Narrative & Chani's Arc)</span>
+              <span class="text-amber-400 font-mono font-bold">9.2 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-amber-500 rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 觀眾選片決策指引 (Audience Decision Guide) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-emerald-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 font-bold text-sm">
+            <span>✓</span>
+            <h3>這部作品極度適合你，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>追求極致大銀幕視聽轟炸與世界級音場震撼的影院狂熱者</li>
+            <li>沉迷於丹尼·維勒納夫冷冽、嚴謹、神聖的「巨物感」攝影美學</li>
+            <li>對宗教狂熱、反英雄彌賽亞神話與帝國政治角力有興趣的深度影迷</li>
+          </ul>
+        </div>
+        <div class="p-5 rounded-2xl bg-[#18181f] border border-amber-900/40 space-y-2">
+          <div class="flex items-center gap-2 text-amber-400 font-bold text-sm">
+            <span>✕</span>
+            <h3>觀看前請做好心理準備，如果：</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>片長長達 166 分鐘且哲學與政治資訊龐雜，疲憊時觀賞可能稍感沉重</li>
+            <li>尚未觀看第一部者，建議先補足前情提要，否則家族恩怨不易快速進入狀況</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 無雷簡介 (Spoiler-Free) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-[#262630] pb-3">
+          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+          <h2>無雷簡介與觀影指引</h2>
+        </div>
+        <div class="space-y-4 text-neutral-300 leading-relaxed text-sm sm:text-base">
+          <p>
+            接續第一部的逃亡之旅，保羅·亞崔迪（提摩西·夏勒梅 飾）與母親潔西嘉女士融入了厄拉科斯沙漠的原住民弗瑞曼人之中。在嚴酷的沙漠試煉中，保羅逐漸學習沙行與駕馭沙蟲，並贏得了弗瑞曼戰士的尊重與荃妮（辛蒂亞 飾）的深厚愛意。
+          </p>
+          <p>
+            然而，哈肯能家族與帝國皇帝的陰影步步進逼，南部原住民將保羅視為預言中的「天外之音」（Lisan al-Gaib）。維勒納夫在視覺與聽覺上的掌控力登峰造極，漢斯·季默的配樂與格雷格·弗萊瑟的沙漠黑白鏡頭呈現，構成了本世紀最具壓迫感的大銀幕體驗。<strong>強烈建議選擇 IMAX 規格觀賞！</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- 有雷心得分析 (Spoiler Section - 原生手風琴折疊) -->
+      <section class="space-y-4">
+        <details class="group bg-[#18181f] border border-amber-900/40 rounded-2xl overflow-hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-neutral-800/40 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">⚠️</span>
+              <div>
+                <h2 class="text-lg font-bold text-amber-200">深度劇情剖析與結局探討（含重大劇透）</h2>
+                <p class="text-xs text-neutral-400 mt-0.5">點擊以展開完整解析：含結局抉擇、原著差異與聖戰開端</p>
+              </div>
+            </div>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform duration-200 font-mono text-xl">▼</span>
+          </summary>
+          <div class="px-6 pb-8 sm:px-8 pt-4 space-y-5 text-neutral-300 border-t border-[#262630]/60 leading-relaxed text-sm sm:text-base">
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-[#e50914]">#1</span> 預言的本質：不是救贖，而是殖民控制的符號工具
+              </h3>
+              <p>
+                電影最深刻的改編在於對「貝尼·潔瑟睿德姐妹會」宗教預言的去神話化。保羅深知「天外之音」只是數百年來姐妹會深植於當地的思想控制手段，但他為了向哈肯能與皇帝復仇，最終不得不選擇飲下生命之水，主動戴上這頂虛假的先知冠冕。
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-[#e50914]">#2</span> 荃妮的視角轉變：悲劇的見證者與反英雄的清醒痛楚
+              </h3>
+              <p>
+                相較於原著中荃妮的順從，電影賦予了荃妮現代性的批判視角。她代表了清醒與自由意志，看著愛人從並肩作戰的少年一步步墮落為發動聖戰的專制君主。當保羅在皇帝面前宣稱迎娶伊若琅公主時，荃妮決然騎上沙蟲離開的背影，成為整部電影最淒美也最震撼的收尾。
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+                <span class="text-[#e50914]">#3</span> 聖戰引爆：反英雄的無可奈何與「小心有魅力的領袖」
+              </h3>
+              <p>
+                大氏族的戰艦拒絕承認新皇，保羅平靜地吐出「帶他們去天堂」（Lead them to paradise），數百億人的浩劫就此開啟。導演精準傳達了原著作者法蘭克·赫伯特的警世名言：「小心那些有魅力的領袖。」
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 篇章導覽 (Prev / Next Review Navigation) -->
+      <div class="pt-8 border-t border-[#262630] grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="movie-the-truman-show.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col">
+          <span class="text-xs text-neutral-500 font-mono">上一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-sky-400 transition mt-1">← 楚門的世界 (4.6★)</span>
+        </a>
+        <a href="../index.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col text-right">
+          <span class="text-xs text-neutral-500 font-mono">目錄導航</span>
+          <span class="text-sm font-bold text-white group-hover:text-amber-400 transition mt-1">回到首頁所有筆記 →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 頁腳 Footer -->
+  <footer class="border-t border-[#262630] bg-[#121216] py-6 text-center text-xs text-neutral-500">
+    <p>© 2026 CineLog 個人影評與劇評筆記 · 使用純靜態 HTML & Tailwind CSS 建構</p>
+  </footer>
+
+  <script>
+    function copyQuote() {
+      const text = document.getElementById('quote-text').innerText.replace(/[「」]/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✅ 已複製！</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>

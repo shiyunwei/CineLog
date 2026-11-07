@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【影評】後室 (The Backrooms) - 觀影筆記</title>
+  <!-- 電影拍板 Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎬</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cinema: {
+              black: '#0a0a0c',
+              dark: '#121216',
+              card: '#18181f',
+              border: '#262630',
+              accent: '#e50914',
+              gold: '#f5c518',
+              textMuted: '#9e9ea7',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0a0a0c] text-neutral-100 min-h-screen flex flex-col antialiased selection:bg-[#e50914] selection:text-white">
+
+  <!-- 頂部導航列 (返回首頁) -->
+  <header class="border-b border-[#262630] bg-[#121216]/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="../index.html" class="flex items-center gap-2 text-neutral-300 hover:text-white transition group text-sm font-medium">
+        <span class="group-hover:-translate-x-1 transition-transform">←</span>
+        <span>返回首頁目錄</span>
+      </a>
+      <span class="text-xs uppercase tracking-widest text-neutral-500 font-mono">Film & TV Notes</span>
+    </div>
+  </header>
+
+  <!-- 主要內容區 -->
+  <main class="flex-grow max-w-4xl mx-auto px-4 py-8 sm:py-10 w-full">
+    <article class="space-y-8">
+
+      <!-- 16:9 劇照展示 -->
+      <div class="rounded-2xl overflow-hidden border border-[#262630] relative aspect-video shadow-2xl shadow-yellow-950/20 group">
+        <img src="../assets/movie-the-backrooms.jpg" alt="後室劇照" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-80"></div>
+      </div>
+
+      <!-- 作品標頭元資料 -->
+      <header class="space-y-4">
+        <div class="flex flex-wrap items-center gap-2">
+          <!-- 類型標籤 (Pills) -->
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-red-950/80 text-red-300 border border-red-800">電影</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-yellow-950/80 text-yellow-300 border border-yellow-800">類比恐怖</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">科幻</span>
+          <span class="px-2.5 py-1 text-xs font-medium rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">恐怖</span>
+          <span class="text-xs text-neutral-500 ml-auto font-mono">觀影日期：2026-11-08</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">後室</h1>
+        <p class="text-lg text-neutral-400 font-light">The Backrooms (2022) · 導演：凱恩·帕森斯 (Kane Parsons)</p>
+
+        <!-- 5 星評分專用徽章與閱讀時長 -->
+        <div class="flex flex-wrap items-center gap-4">
+          <div class="inline-flex items-center gap-3 bg-[#18181f] border border-[#262630] px-4 py-2 rounded-xl">
+            <span class="text-2xl text-[#f5c518]">★★★★☆</span>
+            <div class="flex flex-col">
+              <span class="text-sm font-bold text-white">4.0 <span class="text-neutral-500 font-normal">/ 5.0</span></span>
+              <span class="text-xs text-neutral-400">當代類比恐怖的現象級巔峰</span>
+            </div>
+          </div>
+          <span class="text-xs text-neutral-500 font-mono bg-[#18181f] border border-[#262630] px-3 py-2 rounded-xl">⏱️ 閱讀時間：約 3 分鐘</span>
+        </div>
+      </header>
+
+      <!-- 作品檔案規格面板 (Film Facts Grid) -->
+      <section class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-[#18181f] border border-[#262630] rounded-2xl p-4 sm:p-5">
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">發表形式</span>
+          <span class="text-sm font-semibold text-white">2022 年</span>
+          <span class="text-xs text-neutral-400 block">偽紀錄短片系列</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">原創作者</span>
+          <span class="text-sm font-semibold text-white">凱恩·帕森斯</span>
+          <span class="text-xs text-neutral-400 block">Kane Pixels (16歲)</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">視覺風格</span>
+          <span class="text-sm font-semibold text-white">VHS 低保真錄影帶</span>
+          <span class="text-xs text-neutral-400 block">Blender 頂級物理渲染</span>
+        </div>
+        <div class="space-y-1">
+          <span class="text-xs text-neutral-500 font-mono block">推薦觀影規格</span>
+          <span class="text-sm font-semibold text-yellow-400">深夜關燈 · 必戴耳機</span>
+          <span class="text-xs text-neutral-400 block">聆聽發霉日光燈低頻</span>
+        </div>
+      </section>
+
+      <!-- 一句話短評 / 金句摘錄 (含一鍵複製) -->
+      <div class="p-5 border-l-4 border-yellow-500 bg-[#18181f] rounded-r-2xl flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <blockquote id="quote-text" class="italic text-neutral-200 text-base leading-relaxed">
+          「若你一不小心在現實世界中穿牆卡出界（No-clip），迎面而來的將是六億平方英里無休止的潮濕黃色地毯與日光燈嗡嗡聲。」
+        </blockquote>
+        <button onclick="copyQuote()" id="copy-btn" class="self-end sm:self-center flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 text-xs text-neutral-300 hover:text-white transition cursor-pointer border border-neutral-700 font-mono">
+          <span>📋 複製金句</span>
+        </button>
+      </div>
+
+      <!-- 多維度深度評析 (Dimension Rating Bars) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center justify-between border-b border-[#262630] pb-3">
+          <h2 class="text-lg font-bold text-white flex items-center gap-2">
+            <span class="text-[#f5c518]">★</span> 多維度深度評析
+          </h2>
+          <span class="text-xs font-mono text-neutral-400">綜合評析指數：9.4 / 10</span>
+        </div>
+        <div class="space-y-3.5 text-sm">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">閾限空間氛圍造詣 (Liminal Space Atmosphere)</span>
+              <span class="text-yellow-400 font-mono font-bold">10.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-yellow-500 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">聲音設計與環境微噪音 (Sound Design & Foley)</span>
+              <span class="text-yellow-400 font-mono font-bold">9.8 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-yellow-500 rounded-full" style="width: 98%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">類比恐怖概念突破 (Analog Horror Innovation)</span>
+              <span class="text-yellow-400 font-mono font-bold">9.7 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-yellow-500 rounded-full" style="width: 97%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-neutral-300 font-medium">傳統角色情節與敘事 (Traditional Narrative)</span>
+              <span class="text-yellow-400 font-mono font-bold">8.0 / 10</span>
+            </div>
+            <div class="w-full h-2 rounded-full bg-neutral-800 overflow-hidden">
+              <div class="h-full bg-yellow-500 rounded-full" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 觀影決策指南 (Audience Guide) -->
+      <section class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-[#18181f] border border-yellow-900/40 rounded-2xl p-5 sm:p-6 space-y-2">
+          <div class="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+            <span>✅</span>
+            <h3>極力推薦觀看群體</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>沉迷於「閾限空間 (Liminal Space)」、SCP 基金會與網路怪談的愛好者</li>
+            <li>厭倦了突發驚嚇 (Jump Scare)，偏好心理細思極恐氛圍的恐怖片迷</li>
+            <li>對 90 年代復古磁帶手持攝影美學深感興趣的創作愛好者</li>
+          </ul>
+        </div>
+        <div class="bg-[#18181f] border border-rose-900/30 rounded-2xl p-5 sm:p-6 space-y-2">
+          <div class="flex items-center gap-2 text-rose-400 font-bold text-sm">
+            <span>⚠️</span>
+            <h3>可能需要心理準備</h3>
+          </div>
+          <ul class="text-xs text-neutral-300 space-y-1.5 list-disc list-inside leading-relaxed">
+            <li>全片手持走動與劇烈奔跑，3D 暈眩體質者請注意視角</li>
+            <li>幾無傳統角色對話，主打純空間探索與聽覺壓迫體驗</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 無雷簡介 (Spoiler-Free) -->
+      <section class="bg-[#18181f] border border-[#262630] rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-[#262630] pb-3">
+          <span class="text-emerald-400">●</span>
+          <h2>無雷簡介與推薦指南</h2>
+        </div>
+        <div class="space-y-4 text-neutral-300 leading-relaxed">
+          <p>
+            源自 4chan 著名都市傳說與「閾限空間」（Liminal Space）迷因，《後室》（The Backrooms）在年僅 16 歲的天才創作者 Kane Parsons 手中被昇華為令人背脊發涼的偽紀錄片（Found Footage）視聽奇觀。故事講述一名 1990 年代的攝影愛好者在拍攝短片時失足穿透地面，掉進了現實邊界之外的未知空間。
+          </p>
+          <p>
+            那裡沒有出口，只有整齊劃一的泛黃壁紙、受潮發霉的陳舊地毯，以及天花板上發出刺耳低頻蜂鳴的日光燈管。本片不依賴廉價的突發驚嚇（Jump Scare），而是透過無止境的空間疏離感與孤立感，將人類對未知與無垠維度的原始恐懼無限放大。
+          </p>
+        </div>
+      </section>
+
+      <!-- 有雷心得分析 (Spoiler Section - 原生手風琴折疊) -->
+      <section class="space-y-4">
+        <details class="group bg-[#18181f] border border-amber-900/40 rounded-2xl overflow-hidden transition-all duration-300">
+          <summary class="flex items-center justify-between p-6 sm:p-8 cursor-pointer list-none select-none hover:bg-neutral-800/40 transition">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">⚠️</span>
+              <div>
+                <h2 class="text-lg font-bold text-amber-200">深度劇情剖析與結局討論（含重大劇透）</h2>
+                <p class="text-xs text-neutral-400">本區塊包含空間設定、實體追逐與 Async 實驗室背景深度解析</p>
+              </div>
+            </div>
+            <span class="text-neutral-400 group-open:rotate-180 transition-transform duration-200 font-mono text-xl">▼</span>
+          </summary>
+          <div class="px-6 pb-8 sm:px-8 pt-2 space-y-4 text-neutral-300 border-t border-[#262630]/60 leading-relaxed">
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-[#e50914]">#1</span> 閾限恐懼心理學：熟悉卻無生機的死寂
+              </h3>
+              <p>
+                「後室」之所以引發全球狂熱，在於其建構的「過渡性空間」（Transitional Space）。辦公室、走廊與轉角原本是人類日常聚集之處，但當它被抽離了所有家具、窗戶與人類生命跡象時，原本的安全感瞬間異化為深層的壓迫感。走得越遠，越懷疑自己是否早已被物理世界徹底遺忘。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-[#e50914]">#2</span> 骨架實體的追獵：非自然維度的產物
+              </h3>
+              <p>
+                後半段出現的黑色線狀扭曲實體（The Bacteria Entity），伴隨著刺耳的金屬哀鳴在長廊深處瘋狂奔馳。它不是傳統意義上的鬼怪，更像是後室空間本身的免疫系統，無情抹殺任何闖入這個非歐幾里得幾何維度的異物。
+              </p>
+            </div>
+            <div>
+              <h3 class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+                <span class="text-[#e50914]">#3</span> 墜落與虛無：無法被尋獲的磁帶
+              </h3>
+              <p>
+                結局中攝影機在劇烈追逐後從天花板墜落，重回現實世界的草地上，暗示主角肉身永遠被困在無邊的黃色迷宮中，唯有攝影機與磁帶留存。A24 隨後簽下電影改編版權，也證明了類比恐怖已成為新世代恐怖電影不可忽視的全新語言。
+              </p>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <!-- 篇章導覽 (Prev / Next Review Navigation) -->
+      <div class="pt-8 border-t border-[#262630] grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <a href="movie-toy-story-4.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col">
+          <span class="text-xs text-neutral-500 font-mono">上一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-purple-400 transition mt-1">← 玩具總動員4 (4.2★)</span>
+        </a>
+        <a href="movie-the-truman-show.html" class="p-4 rounded-xl bg-[#18181f] border border-[#262630] hover:border-neutral-500 transition group flex flex-col text-right">
+          <span class="text-xs text-neutral-500 font-mono">下一篇影評</span>
+          <span class="text-sm font-bold text-white group-hover:text-sky-400 transition mt-1">楚門的世界 (4.6★) →</span>
+        </a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- 頁腳版權 -->
+  <footer class="border-t border-[#262630] py-6 text-center text-xs text-neutral-500">
+    <p>© 2026 個人影評與劇評筆記 · 使用純靜態 HTML & Tailwind CSS 建構</p>
+  </footer>
+
+  <script>
+    function copyQuote() {
+      const text = document.getElementById('quote-text').innerText.replace(/[「」]/g, '');
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<span>✅ 已複製！</span>';
+        setTimeout(() => btn.innerHTML = orig, 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
