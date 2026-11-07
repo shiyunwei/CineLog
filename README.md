@@ -66,22 +66,3 @@ HW9/
 ├── .gitignore                   # Git 忽略設定
 └── README.md                    # 專案說明文件
 ```
-
----
-
-## 🚀 本地預覽與部署
-
-### 本地瀏覽
-本專案為純靜態架構，直接使用瀏覽器開啟 `index.html` 即可瀏覽所有功能。
-
-### 部署至 GitHub Pages（推薦）
-1. 將本專案推送至 GitHub 儲存庫。
-2. 前往儲存庫的 **Settings** > **Pages**。
-3. 在 **Build and deployment** 下的 **Source** 選擇 `Deploy from a branch`。
-4. **Branch** 選擇 `main`，資料夾選擇 `/(root)`，點擊 **Save**。
-5. 數秒後即可獲得專屬公開網址（如 `https://<your-username>.github.io/<repo-name>/`）！
-
----
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
